@@ -3,19 +3,24 @@
 namespace drupol\drupal7_http_client;
 
 use Http\Client\HttpClient;
-use Http\Discovery\Strategy\DiscoveryStrategy;
-use Http\Client\Drupal7\Client as Drupal7;
-use Http\Message\Drupal7\Drupal7MessageFactory as Drupal7MessageFactory;
+use Http\Discovery\Strategy\DiscoveryStrategy as HttpDiscoveryStrategy;
+use Http\Client\Drupal7\Client as Drupal7Client;
+use Http\Message\Drupal7\MessageFactory as Drupal7MessageFactory;
 use Http\Message\MessageFactory;
 
-class Drupal7DiscoveryStrategy implements DiscoveryStrategy
+/**
+ * Class DiscoveryStrategy
+ *
+ * @package drupol\drupal7_http_client
+ */
+class DiscoveryStrategy implements HttpDiscoveryStrategy
 {
     /**
      * @var array
      */
     private static $classes = [
         HttpClient::class => [
-            ['class' => Drupal7::class, 'condition' => Drupal7::class],
+            ['class' => Drupal7Client::class, 'condition' => Drupal7Client::class],
         ],
         MessageFactory::class => [
             ['class' => Drupal7MessageFactory::class, 'condition' => [Drupal7MessageFactory::class]],
