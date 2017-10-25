@@ -6,13 +6,9 @@ parameters:
       standard: PSR2
       ignore_patterns:
         - vendor/
-        - demo/
         - spec/
       triggered_by:
         - php
-        - module
-        - inc
-        - js
     securitychecker:
         lockfile: ./composer.lock
         format: ~

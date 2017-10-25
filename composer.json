@@ -32,6 +32,7 @@
             "drupol\\drupal7_http_client\\": "src/",
             "Http\\Client\\Drupal7\\": "src/Client/Drupal7",
             "Http\\Message\\Drupal7\\": "src/Message/Drupal7"
-        }
+        },
+        "files": ["src/StrategyLoader.php"]
     }
 }
