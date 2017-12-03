@@ -2,16 +2,18 @@
 
 namespace drupol\drupal7_http_client;
 
+use Http\Client\Drupal7\Client as Drupal7Client;
 use Http\Client\HttpClient;
 use Http\Discovery\Strategy\DiscoveryStrategy as HttpDiscoveryStrategy;
-use Http\Client\Drupal7\Client as Drupal7Client;
 use Http\Message\Drupal7\MessageFactory as Drupal7MessageFactory;
 use Http\Message\MessageFactory;
 
 /**
- * Class DiscoveryStrategy
+ * Class DiscoveryStrategy.
  *
- * @package drupol\drupal7_http_client
+ * @codeCoverageIgnore
+ *
+ * @author Pol Dellaiera <pol.dellaiera@protonmail.com>
  */
 class DiscoveryStrategy implements HttpDiscoveryStrategy
 {
@@ -35,6 +37,7 @@ class DiscoveryStrategy implements HttpDiscoveryStrategy
         if (isset(self::$classes[$type])) {
             return self::$classes[$type];
         }
+
         return [];
     }
 }

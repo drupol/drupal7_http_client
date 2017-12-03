@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/drupol/drupal7_http_client.svg?branch=master)](https://travis-ci.org/drupol/drupal7_http_client)
+
 # Drupal 7 HTTP Client
 
 This is a small experimental library to bridge [HTTPlug](https://github.com/php-http/httplug) and Drupal 7.

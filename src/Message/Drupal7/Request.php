@@ -6,9 +6,9 @@ use GuzzleHttp\Psr7\Request as GuzzleHttpPsr7Request;
 use Psr\Http\Message\RequestInterface;
 
 /**
- * Class Request
+ * Class Request.
  *
- * @package Http\Adapter\Drupal7
+ * @codeCoverageIgnore
  *
  * @author Pol Dellaiera <pol.dellaiera@protonmail.com>
  */
@@ -49,17 +49,17 @@ class Request extends GuzzleHttpPsr7Request implements RequestInterface
      * @param array $options
      *   The array of options.
      */
-    public function __construct($uri, array $options = array())
+    public function __construct($uri, array $options = [])
     {
         // Merge the default options.
-        $options += array(
-            'headers' => array(),
+        $options += [
+            'headers' => [],
             'method' => 'GET',
             'data' => null,
             'max_redirects' => 3,
             'timeout' => 30.0,
             'context' => null,
-        );
+        ];
 
         $this->timeout = (float) $options['timeout'];
         $this->maxRedirect = $options['max_redirects'];

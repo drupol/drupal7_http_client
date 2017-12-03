@@ -6,9 +6,9 @@ use GuzzleHttp\Psr7\Response as GuzzleHttpPsr7Response;
 use Psr\Http\Message\ResponseInterface;
 
 /**
- * Class Response
+ * Class Response.
  *
- * @package Http\Adapter\Drupal7
+ * @codeCoverageIgnore
  *
  * @author Pol Dellaiera <pol.dellaiera@protonmail.com>
  */

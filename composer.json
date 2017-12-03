@@ -21,8 +21,21 @@
     "require-dev": {
         "phpro/grumphp": "^0.12",
         "squizlabs/php_codesniffer": "^3.0",
-        "sensiolabs/security-checker": "^4.1"
+        "sensiolabs/security-checker": "^4.1",
+        "leanphp/phpspec-code-coverage": "^3.1",
+        "scrutinizer/ocular": "^1.4",
+        "phpmd/phpmd": "^2.6",
+        "sebastian/phpcpd": "^3.0",
+        "friendsofphp/php-cs-fixer": "^2.7",
+        "drupal/drupal": "^7",
+        "phpspec/phpspec": "^3.4"
     },
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://packages.drupal.org/7"
+        }
+    ],
     "provide": {
         "php-http/client-implementation": "1.0",
         "psr/http-message-implementation": "1.0"
@@ -34,5 +47,9 @@
             "Http\\Message\\Drupal7\\": "src/Message/Drupal7"
         },
         "files": ["src/StrategyLoader.php"]
+    },
+    "scripts": {
+        "phpspec": "./vendor/bin/phpspec run",
+        "grumphp": "./vendor/bin/grumphp run"
     }
 }
